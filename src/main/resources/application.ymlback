@@ -1,0 +1,35 @@
+#profile配置
+spring:
+  profiles:
+    active: dev
+  mvc:
+    view:
+      prefix: /WEB-INF/view/
+      suffix: .jsp
+---
+#开发环境配置
+spring:
+  profiles: dev
+
+
+server:
+  port: 8080
+
+
+---
+#测试环境配置
+spring:
+  profiles: test
+
+server:
+  port: 8081
+
+
+---
+#生产环境配置
+
+spring:
+  profiles: pro
+
+server:
+  port: 80
